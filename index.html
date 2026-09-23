@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signal Forge — Websites, Ads & Leads</title>
+  <meta name="description" content="Signal Forge helps local businesses turn attention into leads with conversion-focused websites, paid ads, and growth systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07111f; --bg2:#0b1728; --card:#0f1e33; --card2:#12243d;
+      --text:#f5f8ff; --muted:#9fb0c8; --line:rgba(255,255,255,.09);
+      --blue:#1d7df2; --blue2:#45a1ff; --orange:#ff7a1a; --green:#23d18b;
+      --shadow:0 30px 80px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;background:
+      radial-gradient(circle at 15% 10%, rgba(29,125,242,.16), transparent 26%),
+      radial-gradient(circle at 90% 15%, rgba(255,122,26,.09), transparent 24%),
+      linear-gradient(180deg,#06101d 0%,#081423 58%,#07111f 100%);color:var(--text);overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1180px,92%);margin:auto}
+    .nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(18px);background:rgba(5,13,24,.7);border-bottom:1px solid var(--line)}
+    .navin{height:78px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-family:Manrope;font-weight:800;letter-spacing:.02em}
+    .brand img{width:44px;height:44px;object-fit:cover;border-radius:10px;background:white;padding:3px}
+    .navlinks{display:flex;gap:28px;color:#c4d0df;font-size:14px;font-weight:600}
+    .navcta,.btn-primary{background:linear-gradient(135deg,var(--blue),#2f96ff);padding:13px 18px;border-radius:12px;font-weight:800;box-shadow:0 10px 30px rgba(29,125,242,.25)}
+    .hero{padding:88px 0 80px;position:relative}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid rgba(69,161,255,.26);background:rgba(29,125,242,.08);border-radius:999px;color:#b9d9ff;font-size:13px;font-weight:700}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green)}
+    h1{font-family:Manrope;font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-.05em;margin:24px 0 22px}
+    .grad{background:linear-gradient(90deg,#fff,#83bfff 48%,#ff9b54);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .sub{font-size:20px;line-height:1.7;color:var(--muted);max-width:680px}
+    .hero-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+    .btn-secondary{padding:13px 18px;border-radius:12px;font-weight:800;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .mini-proof{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px;color:#b6c5d8;font-size:14px}
+    .mini-proof span{display:flex;align-items:center;gap:8px}
+    .visual{position:relative}
+    .orb{position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(29,125,242,.25);filter:blur(70px);right:-20px;top:-30px}
+    .dashboard{position:relative;background:linear-gradient(180deg,rgba(18,36,61,.96),rgba(10,24,43,.98));border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);transform:rotate(1.2deg)}
+    .dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+    .dash-logo{display:flex;align-items:center;gap:10px}.dash-logo img{width:34px;height:34px;border-radius:8px;background:white;padding:2px}
+    .pill{font-size:12px;padding:7px 10px;border-radius:999px;background:rgba(35,209,139,.1);color:#7ff0bf;border:1px solid rgba(35,209,139,.22)}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.metric{background:rgba(255,255,255,.035);border:1px solid var(--line);padding:16px;border-radius:16px}.metric b{font-size:24px;display:block}.metric small{color:var(--muted)}
+    .chart{height:190px;margin-top:16px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(29,125,242,.10),rgba(255,255,255,.02));position:relative;overflow:hidden}
+    .chart svg{width:100%;height:100%}
+    .floating{position:absolute;left:-45px;bottom:26px;background:#101f34;border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);width:220px}.floating strong{font-size:14px}.floating span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+    section{padding:88px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}.section-head h2{font-family:Manrope;font-size:44px;letter-spacing:-.04em;margin:0}.section-head p{max-width:560px;color:var(--muted);line-height:1.7;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(180deg,rgba(18,36,61,.82),rgba(12,25,43,.88));border:1px solid var(--line);border-radius:22px;padding:26px;transition:.25s transform,.25s border-color}.card:hover{transform:translateY(-6px);border-color:rgba(69,161,255,.35)}
+    .icon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:rgba(29,125,242,.12);border:1px solid rgba(69,161,255,.2);font-size:22px}.card h3{font-size:21px;margin:18px 0 10px}.card p{color:var(--muted);line-height:1.65}.card ul{padding-left:18px;color:#c9d5e5;line-height:1.9}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:22px;border-top:1px solid var(--line);position:relative}.num{font-family:Manrope;font-size:12px;color:var(--blue2);font-weight:800;letter-spacing:.15em}.step h4{font-size:20px;margin:12px 0 8px}.step p{color:var(--muted);line-height:1.6;font-size:14px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:26px}.proofbox,.pricebox{background:linear-gradient(180deg,rgba(18,36,61,.86),rgba(10,22,38,.9));border:1px solid var(--line);border-radius:24px;padding:30px}.proofbox h3,.pricebox h3{font-size:28px;margin:0 0 10px}.proofbox p,.pricebox p{color:var(--muted);line-height:1.7}.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.stat{padding:18px;background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:16px}.stat b{display:block;font-size:26px}.stat span{color:var(--muted);font-size:12px}
+    .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.price{padding:24px;border-radius:20px;background:rgba(255,255,255,.03);border:1px solid var(--line);position:relative}.price.pop{border-color:rgba(69,161,255,.45);box-shadow:0 0 0 1px rgba(69,161,255,.08) inset}.tag{position:absolute;right:18px;top:18px;font-size:11px;color:#afd4ff;background:rgba(29,125,242,.13);padding:6px 8px;border-radius:999px}.price h4{font-size:20px;margin:0 0 8px}.amt{font-family:Manrope;font-size:34px;font-weight:800}.price small{color:var(--muted)}
+    .cta{padding:42px;border-radius:28px;border:1px solid rgba(69,161,255,.22);background:linear-gradient(135deg,rgba(29,125,242,.14),rgba(255,122,26,.08));display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{font-size:38px;margin:0 0 10px}.cta p{color:var(--muted);margin:0}
+    footer{padding:34px 0 44px;color:#8394ab;border-top:1px solid var(--line);font-size:14px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(18px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+    @media(max-width:900px){.hero-grid,.split{grid-template-columns:1fr}.visual{margin-top:18px}.cards,.prices{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:12px}.navlinks{display:none}.floating{left:10px}.metrics{grid-template-columns:1fr}.cta{display:block}.cta .btn-primary{display:inline-block;margin-top:22px}}
+    @media(max-width:560px){h1{font-size:52px}.hero{padding-top:58px}.process{grid-template-columns:1fr}.statrow{grid-template-columns:1fr}.section-head h2{font-size:36px}.cta h2{font-size:31px}.brand span{font-size:15px}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#top"><img src="logo.png" alt="Signal Forge logo"><span>SIGNAL FORGE</span></a>
+      <div class="navlinks"><a href="#services">Services</a><a href="#process">Process</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
+      <a class="navcta" href="#contact">Get More Leads</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Built for local businesses ready to grow</div>
+          <h1>Turn attention into <span class="grad">real revenue.</span></h1>
+          <p class="sub">Signal Forge builds conversion-focused websites, paid ad campaigns, and lead systems designed to turn clicks into customers.</p>
+          <div class="hero-actions"><a class="btn-primary" href="#contact">Start Growing</a><a class="btn-secondary" href="#services">See What We Do</a></div>
+          <div class="mini-proof"><span>✓ No bloated retainers</span><span>✓ Built around ROI</span><span>✓ Fast, clean execution</span></div>
+        </div>
+        <div class="visual">
+          <div class="orb"></div>
+          <div class="dashboard">
+            <div class="dash-head"><div class="dash-logo"><img src="logo.png" alt=""><b>Growth Dashboard</b></div><span class="pill">LIVE</span></div>
+            <div class="metrics"><div class="metric"><small>Leads</small><b>148</b><small>+38% this month</small></div><div class="metric"><small>Cost / Lead</small><b>$18.42</b><small>down 21%</small></div><div class="metric"><small>Booked Calls</small><b>37</b><small>+14 this week</small></div></div>
+            <div class="chart"><svg viewBox="0 0 600 190" preserveAspectRatio="none"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2f96ff" stop-opacity=".45"/><stop offset="100%" stop-color="#2f96ff" stop-opacity="0"/></linearGradient></defs><path d="M0 160 C60 150, 80 115, 140 125 S240 105, 290 95 S380 120, 430 78 S520 60, 600 28 L600 190 L0 190 Z" fill="url(#g)"/><path d="M0 160 C60 150, 80 115, 140 125 S240 105, 290 95 S380 120, 430 78 S520 60, 600 28" fill="none" stroke="#45a1ff" stroke-width="4"/></svg></div>
+            <div class="floating"><strong>New lead captured</strong><span>Website inquiry • 2 minutes ago</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head reveal"><h2>Growth systems, not random marketing.</h2><p>Everything we build has one job: make your business easier to find, easier to trust, and easier to buy from.</p></div>
+        <div class="cards">
+          <article class="card reveal"><div class="icon">⌘</div><h3>Conversion Websites</h3><p>Modern websites built to make your business look established and move visitors toward a call, quote, booking, or purchase.</p><ul><li>Mobile-first design</li><li>Lead capture forms</li><li>Fast launch</li></ul></article>
+          <article class="card reveal"><div class="icon">↗</div><h3>Paid Ads</h3><p>Focused campaigns across Google and Meta built around customer intent—not vanity metrics.</p><ul><li>Campaign setup</li><li>Creative + copy</li><li>Ongoing optimization</li></ul></article>
+          <article class="card reveal"><div class="icon">⚡</div><h3>Lead Generation</h3><p>Simple systems that capture interest, route leads, and help turn marketing spend into actual conversations.</p><ul><li>Landing pages</li><li>Lead forms</li><li>Follow-up workflows</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="wrap">
+        <div class="section-head reveal"><h2>A simple process that moves fast.</h2><p>No drawn-out agency nonsense. We identify the bottleneck, build the fix, and launch.</p></div>
+        <div class="process"><div class="step reveal"><div class="num">01</div><h4>Audit</h4><p>We look at your website, offer, competition, and how customers currently find you.</p></div><div class="step reveal"><div class="num">02</div><h4>Build</h4><p>We create the pages, ads, and lead system around the strongest opportunity.</p></div><div class="step reveal"><div class="num">03</div><h4>Launch</h4><p>Everything goes live with tracking in place so performance is measurable.</p></div><div class="step reveal"><div class="num">04</div><h4>Scale</h4><p>We improve what works and cut what doesn't, with revenue as the north star.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap split">
+        <div class="proofbox reveal"><h3>Built for businesses that care about results.</h3><p>Signal Forge is positioned for local and service businesses that need more than a pretty website—they need more calls, more inquiries, and a stronger digital presence.</p><div class="statrow"><div class="stat"><b>3</b><span>Core growth services</span></div><div class="stat"><b>1</b><span>Clear point of contact</span></div><div class="stat"><b>0</b><span>Fluff metrics</span></div></div></div>
+        <div class="pricebox reveal"><h3>Clear offers. Easy to understand.</h3><p>Start with what your business actually needs. Add more as growth demands it.</p><div class="prices" id="pricing"><div class="price"><h4>Website</h4><div class="amt">$750<span style="font-size:16px">+</span></div><small>One-time</small></div><div class="price pop"><span class="tag">POPULAR</span><h4>Growth</h4><div class="amt">$1,250<span style="font-size:16px">+</span></div><small>Website + launch campaign</small></div><div class="price"><h4>Ads</h4><div class="amt">$400<span style="font-size:16px">+</span></div><small>Monthly management</small></div></div></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap"><div class="cta reveal"><div><h2>Ready to forge your next customers?</h2><p>Tell us what you're trying to grow. We'll show you the simplest path forward.</p></div><a class="btn-primary" href="mailto:hello@signalforge.co?subject=Signal%20Forge%20Growth%20Inquiry">Start a Conversation</a></div></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap foot"><div>© 2026 Signal Forge. Websites • Ads • Leads.</div><div>Built for growth.</div></div></footer>
+
+  <script>
+    const obs = new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  </script>
+</body>
+</html>
